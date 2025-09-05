@@ -1,0 +1,3 @@
+# This is a placeholder for the Jupiter texture
+# In a real implementation, you would place a 2K Jupiter texture image here
+# For now, the component will create a procedural texture

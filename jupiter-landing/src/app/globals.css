@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+
+:root {
+  /* Jupiter Design System */
+  --jupiter-bg: #05060b;
+  --jupiter-deep: #0a0f1a;
+  --jupiter-accent: #b36d28;
+  --ion-neon: #16f2f2;
+  --ion-purple: #7c3aed;
+  --signal-green: #22c55e;
+  --threat-red: #ef4444;
+  --text-primary: #e6eef7;
+  --text-dim: #9fb0c2;
+
+  /* shadcn/ui variables */
+  --background: var(--jupiter-bg);
+  --foreground: var(--text-primary);
+  --card: var(--jupiter-deep);
+  --card-foreground: var(--text-primary);
+  --popover: var(--jupiter-deep);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--ion-neon);
+  --primary-foreground: var(--jupiter-deep);
+  --secondary: var(--jupiter-deep);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--jupiter-deep);
+  --muted-foreground: var(--text-dim);
+  --accent: var(--jupiter-accent);
+  --accent-foreground: var(--text-primary);
+  --destructive: var(--threat-red);
+  --destructive-foreground: var(--text-primary);
+  --border: rgba(159, 176, 194, 0.2);
+  --input: rgba(159, 176, 194, 0.1);
+  --ring: var(--ion-neon);
+  --chart-1: var(--ion-neon);
+  --chart-2: var(--ion-purple);
+  --chart-3: var(--jupiter-accent);
+  --chart-4: var(--signal-green);
+  --chart-5: var(--threat-red);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--jupiter-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--jupiter-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ion-neon);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ion-purple);
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid var(--ion-neon);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(10, 15, 26, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(22, 242, 242, 0.2);
+}
+
+/* Neon glow utility */
+.neon-glow {
+  box-shadow: 0 0 24px rgba(22, 242, 242, 0.25);
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 32px rgba(22, 242, 242, 0.4);
+}
